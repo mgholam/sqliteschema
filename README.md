@@ -16,3 +16,21 @@ This tool will extract and sync sqlite database schema's non-destructivly.
 
 ## Building and Cross Compiling
 Since the tools uses cgo sqlite package you need to install `zig` if you want to cross compile for other platforms, everthing is defined in `build.sh`.
+
+## usage
+Given you have the following directory structure:
+- data : sqlite database folder
+- schema : schema files
+
+The following shell script will update the database files:
+```sh
+#!/bin/bash
+# update schema
+for f in $(ls schema/*);
+do
+  l=`basename "$f" | sed "s/.json//"`
+  db=$l
+  ./sqliteschema sync data/$db $f
+done
+
+```

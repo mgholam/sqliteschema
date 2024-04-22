@@ -13,7 +13,6 @@ import (
 )
 
 func main() {
-	// syncSchema("ppp.db", "pp.json")
 	args := os.Args[1:]
 	if len(args) == 0 {
 		printHelp()
@@ -75,8 +74,6 @@ func syncSchema(dbpath, schemapath string) {
 	defer db.Close()
 
 	tables := getTables(db)
-	// fmt.Println(tables)
-	// fmt.Println(schema)
 
 	for k, v := range schema {
 		exists := tables[k]
@@ -125,7 +122,6 @@ func addColumn(db *sql.DB, tablename string, coldef Column_Def) {
 		sb.WriteString(coldef.Dflt_value)
 	}
 
-	// log.Println(sb.String())
 	_, err := db.Exec(sb.String())
 	if err != nil {
 		log.Println(err)

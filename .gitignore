@@ -3,3 +3,4 @@ output
 sqliteschema
 *.db
 *.json
+alter column.sql

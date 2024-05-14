@@ -1,6 +1,6 @@
 # SQLite Schema Syncer
 
-This tool will extract and sync sqlite database schema's non-destructivly.
+This tool will extract and sync sqlite database schema's non-destructively.
 - Tables will not be removed.
 - Columns will not be removed, only added.
 - If a database does not exist, it will be created.
@@ -14,7 +14,7 @@ This tool will extract and sync sqlite database schema's non-destructivly.
 
 ```
 ## Building and Cross Compiling
-Since the tools uses cgo sqlite package you need to install `zig` if you want to cross compile for other platforms, everthing is defined in `build.sh`.
+Since the tools uses cgo sqlite package you need to install `zig` if you want to cross compile for other platforms, everything is defined in `build.sh`.
 
 ## usage
 Given you have the following directory structure:

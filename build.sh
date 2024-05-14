@@ -28,14 +28,14 @@ strip output/${ON}
 
 
 # -------------------------------------------------------------
-# echo "building windows..."
+echo "building windows..."
 
-# ON=${ANAME}64.exe
-# CGO_ENABLED=1 \
-# GOOS=windows \
-# GOARCH=amd64 \
-# CC="${ZIG} -static -target x86_64-windows-gnu" \
-# go build -o output/${ON} -ldflags "-w -s" ./
+ON=${ANAME}64.exe
+CGO_ENABLED=1 \
+GOOS=windows \
+GOARCH=amd64 \
+CC="${ZIG} -static -target x86_64-windows-gnu" \
+go build -o output/${ON} -ldflags "-w -s" ./
 
 # ON=${ANAME}386.exe
 # CGO_ENABLED=1 \

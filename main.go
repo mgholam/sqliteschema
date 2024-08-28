@@ -38,6 +38,7 @@ func main() {
 }
 
 func printHelp() {
+	fmt.Printf("sqliteschema version %s%d\n", VERSION, BUILD)
 	fmt.Println("args:")
 	fmt.Println("      sync    <dbname.db> <schema.json>")
 	fmt.Println("      extract <dbname.db>")

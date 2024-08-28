@@ -14,7 +14,7 @@ This tool will extract and sync sqlite database schema's non-destructively.
 
 ```
 ## Building and Cross Compiling
-Since the tools uses cgo sqlite package you need to install `zig` if you want to cross compile for other platforms, everything is defined in `build.sh`.
+Since the tools uses cgo sqlite package you need to install `zig` if you want to cross compile for other platforms, everything is defined in `cmd/build/build.go` which is a pure go script to build for multiple platforms.
 
 ## usage
 Given you have the following directory structure:
